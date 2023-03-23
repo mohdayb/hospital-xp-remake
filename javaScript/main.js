@@ -87,12 +87,15 @@ async function animate(){
 window.onload = ()=>{
     //up
     animate();
-    if (window.scrollY + window.screen.availHeight >= govermentSupp.offsetTop -500 ) {
-        govermentSupp.classList.add('animt-up1');
-        document.getElementById('filler').classList.remove('filler');
+    if (window.scrollY + window.screen.availHeight >= govermentSupp.offsetTop  ) {
         setTimeout(()=>{
-            govermentSupp.classList.remove('hidden')
-        },3000)
+            
+            govermentSupp.classList.add('animt-up1');
+            document.getElementById('filler').classList.remove('filler');
+            setTimeout(()=>{
+                govermentSupp.classList.remove('hidden')
+            },3000)
+        },200)
     }
 
     
@@ -106,15 +109,18 @@ window.onload = ()=>{
         },2000)
     }
 
-    if (window.scrollY + window.screen.availHeight >= idsGroub.offsetTop -500 ) {
-        idsGroub.classList.add('animt-down1');
-        document.getElementById('filler').classList.remove('filler');
+    if (window.scrollY + window.screen.availHeight >= idsGroub.offsetTop  ) {
         setTimeout(()=>{
-            idsGroub.classList.remove('hidden')
-        },3000)
+            idsGroub.classList.add('animt-down1');
+            document.getElementById('filler').classList.remove('filler');
+            setTimeout(()=>{
+                idsGroub.classList.remove('hidden')
+            },3000)
+        },200)
     }
 
     if (window.scrollY + window.screen.availHeight >= progress.offsetTop -500 ) {
+
         progress.classList.add('animt-down');
         document.getElementById('filler').classList.remove('filler');
         setTimeout(()=>{
